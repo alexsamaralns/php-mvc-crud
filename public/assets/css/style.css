@@ -1,0 +1,92 @@
+* {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 65px 1fr 50px;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+    height: 100vh;
+    margin: 0;
+    background-color: #DDD;
+}
+
+header.header {
+    grid-area: header;
+    display: flex;
+    position: sticky;
+    background-color: #ff7f50;    
+    align-items: center;
+    z-index: 10;
+    box-shadow: 
+        0 2px 4px -1px rgba(0, 0, 0, .2),
+        0 4px 4px 0px rgba(0, 0, 0, .14),
+        0 1px 10px 0px rgba(0, 0, 0, .12);
+}
+
+.header .menu > a{
+    text-decoration: none;
+    color: #662209;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+
+.header .home {
+    border-right: 2px solid #662209;
+    padding: 10px;
+}
+
+.header .menu > a:hover{
+    color: #160701;
+}
+
+main.content {
+    grid-area: content;
+    background-color: #ffffff;    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+}
+
+.content > h2 {
+    color: #662209;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.content .post-title {
+    border: none;
+    background-color: #ffa98a;
+    border-top: 3px solid #662209;    
+    margin-bottom: 20px;
+}
+
+.content .post-title > a {
+    color: #662209;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.content .post-title > a:hover {
+    color: #160701;
+}
+
+footer.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    background-color: #662209; 
+    color: #f8ca4c;
+    font-weight: 600;
+    position: sticky;
+}
