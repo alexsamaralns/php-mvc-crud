@@ -1,7 +1,8 @@
 <?php
 
-    ini_set('display_errors', 0);
+    ini_set('display_errors', 1);
 
+    require_once('vendor/autoload.php');
     require_once(dirname(__DIR__) . '/src/config/config.php');
     $template = file_get_contents(TEMPLATE_PATH . '/structure.php');
 
