@@ -1,23 +1,14 @@
 <h2>Posts</h2>
-<div class="card">
-    <div class="card-header post-title">
-        <a href="#">Title</a>            
-    </div>
-    <div class="card-body">
-    <p class="mb-0">Subtitle</p>
-    </div>
-    <!--<div class="card-footer d-flex justify-content-center">
+{% for post in posts %}
+    <div class="card mb-5">
+        <div class="card-header post-title">
+            <a href="index.php?page=post&id={{ post.id }}">{{ post.title }}</a>            
+        </div>
+        <div class="card-body">
+            <p class="mb-0">{{ post.subtitle }}</p>
+        </div>
+        <!--<div class="card-footer d-flex justify-content-center">
 
-    </div>-->
-</div>
-<div class="card mt-5">
-    <div class="card-header post-title">
-        <a href="#">Title</a>
+        </div>-->
     </div>
-    <div class="card-body">
-    <p class="mb-0">Subtitle</p>
-    </div>
-    <!--<div class="card-footer d-flex justify-content-center">
-
-    </div>-->
-</div>
+{% endfor %}    

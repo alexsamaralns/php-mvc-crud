@@ -18,6 +18,7 @@
     //require_once(realpath(dirname(__FILE__) . '/utils.php'));
     require_once(realpath(CORE_PATH . '/Core.php'));
     require_once(realpath(CONTROLLER_PATH . '/HomeController.php'));
+    require_once(realpath(CONTROLLER_PATH . '/PostController.php'));
     require_once(realpath(CONTROLLER_PATH . '/ErrorController.php'));
     require_once(realpath(MODEL_PATH . '/Post.php'));
     //require_once(realpath(MODEL_PATH . '/Model.php'));

@@ -22,6 +22,23 @@
 
         }
 
+        public static function getPostById($id) {
+
+            $conn = Connection::getConn();
+            $sql = "SELECT title, subtitle, content FROM posts WHERE id = :id";
+            $sql = $conn->prepare($sql);
+            $sql->bindValue(':id', $id, PDO::PARAM_INT);
+            $sql->execute();
+            $result = $sql->fetchObject('Post');
+
+            if(empty($result)) {
+                throw new Exception("There's nothing here!");
+            }
+
+            return $result;
+
+        }
+
     }
 
 ?>

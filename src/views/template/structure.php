@@ -13,8 +13,8 @@
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg menu">
-            <a href="#" class="home">Home</a>
-            <a href="#">Sobre</a>    
+            <a href="index.php" class="home">Home</a>
+            <a href="index.php?page=sobre">Sobre</a>    
         </nav>
     </header>
     <main class="content">

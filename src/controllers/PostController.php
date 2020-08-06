@@ -1,17 +1,20 @@
 <?php
 
-    class HomeController {
+    class PostController {
 
-        public function index() {
+        public function index($params) {
             
             try{
-                $postsCollections = Post::getAllPost();
+                
+                $post = Post::getPostById($params);
 
                 $loader = new \Twig\Loader\FilesystemLoader('../src/views');
                 $twig = new \Twig\Environment($loader);
-                $template = $twig->load('home.php');
+                $template = $twig->load('single.php');
                 $params = [];
-                $params['posts'] = $postsCollections;
+                $params['title'] = $post->title;
+                $params['subtitle'] = $post->subtitle;
+                $params['content'] = $post->content;
                 $content = $template->render($params);
 
                 echo $content;
