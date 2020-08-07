@@ -4,7 +4,12 @@
 
         public function start($urlGet) {
             
-            $action = 'index';
+            if(isset($urlGet['method'])) {
+                $action = $urlGet['method'];
+            }else {
+                $action = 'index';
+            }    
+                    
             if(isset($_GET['page'])) {
                 $controller = ucfirst($urlGet['page'].'Controller');
             }else {
